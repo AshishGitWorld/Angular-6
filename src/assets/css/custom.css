@@ -1,0 +1,74 @@
+.logo img{
+    width: 176px;
+}
+.user-menu .dropdown .user-details {
+    background: #00b7ff;
+}
+.sidebar ul>li a {
+    padding: 10px 0 !important;
+}
+
+@media (min-width: 992px){
+   .sidebar ul>li ul li a {
+    padding: 3px 10px !important;
+   }
+   main {
+    margin-left: 250px;
+  }
+  .sidebar {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+        transform: translateX(0);
+  }
+  .footer{
+      padding-left: 265px;
+  }
+}
+
+.required{
+    color:red;
+  }
+
+
+.select2-selection--multiple{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.list-images{
+    margin-bottom: 0 !important;
+}
+
+.list-images li{
+    margin-bottom: 20px !important;
+}
+
+.list-images .ls-img img{
+    display: block;
+    width: 100%;
+ }
+
+ .ls-action{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: baseline;
+        -webkit-align-items: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
+     padding: 5px;
+     background-color: #f0f0f0;
+ }
+
+ .ls-action span{
+     padding: 0 5px;
+ }
+
+main {
+    min-height: calc(100vh - 111px) !important;
+}

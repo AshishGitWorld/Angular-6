@@ -1,0 +1,57 @@
+
+<!-- <div class="card">
+		<div class="card-header">
+			<h4>Packages</h4>
+		</div>
+		<div class="card-body">
+		<table datatable class="row-border hover">
+		  <thead>
+	    <tr>
+	      <th>Title</th>
+	      <th>Description</th>
+	      <th>Duration</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+		  <tr *ngFor="let record of details.package_detail">
+		      <td>{{record.package_title | uppercase}}</td>
+		      <td>{{record.package_description }}</td>
+		      <td class="text-right">{{record.duration}}</td>
+		  </tr>
+		  </tbody>
+		   
+		</table>
+		</div>
+	</div> -->	
+
+<header>
+  <nav class="navbar navbar-default">
+    <a class="navbar-brand" href="#">Packages</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="row">
+    <nav class="navbar">
+      <input [(ngModel)]="searchText" placeholder="Search.." class="form-control" type="text" name="search">      
+    </nav>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+	      <th>Description</th>
+	      <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of details.package_detail ; let i=index;">
+        	<td>{{i+1}}</td>
+	      	<td>{{record.package_title | uppercase}}</td>
+	      	<td>{{record.package_description }}</td>
+	      	<td class="text-right">{{record.duration}}</td>
+	  	</tr>
+      </tbody>
+    </table>
+  </div>
+</div>

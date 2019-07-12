@@ -1,0 +1,75 @@
+
+<app-header></app-header>
+
+<ngx-spinner
+bdOpacity = 0.9
+bdColor = "#333"
+size = "medium"
+color = "#fff"
+type = "ball-atom"
+[fullScreen] = "true"
+>
+<p style="color: white" > Loading... </p>
+</ngx-spinner>
+
+<div class="wrapper" *ngIf="auth.isLoggedIn()">
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <!-- <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
+        </div> -->
+
+        <ul class="list-unstyled components">
+           <!--  <p>Packages</p> -->
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Packages</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a [routerLink]="['/package/create']">Create New Package</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/package/list']">Package List</a>
+                    </li>
+                     
+                </ul>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <router-outlet></router-outlet>
+    </div>
+
+</div> 
+
+<div class="wrapper" *ngIf="!auth.isLoggedIn()" >
+	<router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
+
+<!-- <router-outlet></router-outlet> -->

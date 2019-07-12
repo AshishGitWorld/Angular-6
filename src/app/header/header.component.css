@@ -1,0 +1,8 @@
+nav {
+	z-index: 9999;
+	} 
+
+.navbar {
+	position: fixed;
+    width: 100%;
+}
